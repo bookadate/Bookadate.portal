@@ -1,0 +1,59 @@
+@import "./_mixins.scss";
+@import "./_gogo.style.scss";
+@import "./_plugins.scss";
+
+/** your custom css code **/
+/*
+html {
+    background-color: $theme-color-1 !important;
+}
+*/
+
+.sidebar .main-menu ul li a{
+  text-align: center !important;
+}
+
+.logo-single {
+  width: 110px;
+  height: 90px;
+  background: url('../../img/bookadatelogo.png') no-repeat;
+  background-position: center center;
+  display: inline-block;
+  margin-bottom: 60px;
+}
+.custom-switch{
+  display: block !important;
+  width: 58px !important;
+  height: 27px !important;
+  border: none;
+}
+.dashboard-search {
+  //background-size: cover;
+  background-image: none !important;
+}
+.table-divided td, .table-divided th {
+  border-bottom: solid;
+  padding: 10px 10px 10px 10px !important;
+}
+
+
+.navbar .navbar-logo {
+  width: 150px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+@media (max-width: 419px) {
+  .navbar .navbar-logo {
+    width: 100px !important;
+  }
+}
+
+.badge-green{
+  background-color: green !important;
+}
+.badge-orange{
+  background-color: orange !important;
+}
