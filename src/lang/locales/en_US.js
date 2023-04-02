@@ -227,6 +227,7 @@ module.exports = {
   'dashboards.conversion-rates': 'Bookings',
   'dashboards.per-session': 'Per Session',
   'dashboards.profile-status': 'Profile Status',
+  'dashboards.sales-status': 'Sales Status',
   'dashboards.payment-status': 'Payment Status',
   'dashboards.work-progress': 'Work Progress',
   'dashboards.tasks-completed': 'Tasks Completed',

@@ -16,6 +16,12 @@ import IntlMessages from '../../../helpers/IntlMessages';
 import SpecialDayForm from '../../../containers/email/SpecialDayForm';
 import SmallLineCharts from '../../../containers/dashboards/SmallLineCharts';
 import TotalRevenue from './TotalRevenue';
+import SalesStatuses from '../../../containers/dashboards/SalesStatuses';
+import Logs from '../../../containers/dashboards/Logs';
+import Tickets from '../../../containers/dashboards/Tickets';
+import InboundReservations from '../../../containers/dashboards/InboundReservations';
+import Customers from '../../../containers/dashboards/Customers';
+
 const DefaultDashboard = ({ intl, match }) => {
   const [modalBasic, setModalBasic] = useState(false);
   const [specialDays, setSpecialDays] = useState([
@@ -845,12 +851,12 @@ const DefaultDashboard = ({ intl, match }) => {
   };
   return (
     <>
-      <Row>
+      {/* <Row>
         <Colxx xxs="12">
           <Breadcrumb heading="menu.dashboards" match={match} />
           <Separator className="mb-5" />
         </Colxx>
-      </Row>
+      </Row> */}
       <Row className="mb-4">
         <Colxx xl="6" lg="12" className="d-block">
           {/* <BestSellers /> */}
@@ -868,21 +874,26 @@ const DefaultDashboard = ({ intl, match }) => {
 
       <SmallLineCharts />
 
+
       <Row>
         <Colxx lg="6" md="12" className="mb-4">
           {/* <ProductCategoriesPolarArea chartClass="dashboard-donut-chart" /> */}
           <ProductCategoriesDoughnut />
         </Colxx>
-        {/* <Colxx lg="6" md="6" className="mb-4"> */}
-        {/*  /!* <Logs /> *!/ */}
-        {/*  <InboundReservations /> */}
-        {/* </Colxx> */}
-        {/* <Colxx lg="6" md="6" className="mb-4"> */}
-        {/*  /!* <Tickets /> *!/ */}
-        {/*  <Customers /> */}
-        {/* </Colxx> */}
         <Colxx md="6" className="mb-4">
           <TotalRevenue />
+        </Colxx>
+      </Row>
+
+      <Row>
+        <Colxx sm="12" lg="4" md="4" className="mb-4">
+          <SalesStatuses />
+        </Colxx>
+        <Colxx lg="4" md="4" className="mb-4">
+          <Logs />
+        </Colxx>
+        <Colxx lg="4" md="4" className="mb-4">
+          <Tickets />
         </Colxx>
       </Row>
 
@@ -909,20 +920,19 @@ const DefaultDashboard = ({ intl, match }) => {
       {/*  </Colxx> */}
       {/* </Row> */}
       <Row>
-        {/* <Colxx sm="12" lg="4" className="mb-4"> */}
-        {/*  <ProfileStatuses /> */}
-        {/* </Colxx> */}
-        {/* <Colxx md="6" lg="4" className="mb-4"> */}
-        {/*  <GradientCardContainer /> */}
-        {/* </Colxx><Colxx sm="12" lg="4" className="mb-4"> */}
-        {/*  <ProfileStatuses /> */}
-        {/* </Colxx> */}
-        {/* <Colxx md="6" lg="4" className="mb-4"> */}
-        {/*  <GradientCardContainer /> */}
-        {/* </Colxx> */}
-        {/* <Colxx md="6" lg="4" className="mb-4"> */}
-        {/*  <ProductListed /> */}
-        {/* </Colxx> */}
+        
+        {/* <Colxx md="6" lg="4" className="mb-4">
+          <GradientCardContainer />
+        </Colxx> */}
+        {/* <Colxx sm="12" lg="4" className="mb-4">
+          <ProfileStatuses />
+        </Colxx> */}
+        {/* <Colxx md="6" lg="4" className="mb-4">
+          <GradientCardContainer />
+        </Colxx> */}
+        {/* <Colxx md="6" lg="4" className="mb-4">
+          <ProductListed />
+        </Colxx> */}
       </Row>
       {/* <SortableStaticticsRow messages={messages} /> */}
       {/* <Row> */}

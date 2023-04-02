@@ -7,6 +7,7 @@ import Breadcrumb from '../../../containers/navs/Breadcrumb';
 import { Separator, Colxx } from '../../../components/common/CustomBootstrap';
 import IntlMessages from '../../../helpers/IntlMessages';
 import products from '../../../data/products';
+import { regularBookings } from '../../../data/products';
 
 const BillingInvoice = ({ match }) => {
   const tax = products
@@ -23,13 +24,13 @@ const BillingInvoice = ({ match }) => {
     .reduce((a, c) => a + c);
   return (
     <>
-      <Row>
+      {/* <Row>
         <Colxx xxs="12">
           <Breadcrumb heading="menu.invoice" match={match} />
           <Separator className="mb-5" />
         </Colxx>
-      </Row>
-      <Row>
+      </Row> */}
+      {/* <Row>
         <Colxx xxs="12">
           <Card className="mb-5">
             <CardBody>
@@ -37,15 +38,15 @@ const BillingInvoice = ({ match }) => {
             </CardBody>
           </Card>
         </Colxx>
-      </Row>
+      </Row> */}
 
-      <Row>
+      {/* <Row>
         <Colxx xxs="12">
           <h3 className="mb-4">
             <IntlMessages id="pages.react-version" />
           </h3>
         </Colxx>
-      </Row>
+      </Row> */}
 
       <Row className="invoice-react">
         <Colxx xxs="12" md={8} className="m-auto mb-4">
@@ -79,6 +80,7 @@ const BillingInvoice = ({ match }) => {
                 </div>
                 <div className="border-bottom pt-4 mb-5" />
 
+
                 {/*<div className="d-flex flex-row justify-content-between mb-5">*/}
                 {/*  <div className="d-flex flex-column w-70 mr-2 p-4 text-semi-muted bg-semi-muted">*/}
                 {/*    <p className="mb-0">Latashia Nagy</p>*/}
@@ -91,7 +93,7 @@ const BillingInvoice = ({ match }) => {
                 {/*    <p className="mb-0">02.02.2019</p>*/}
                 {/*  </div>*/}
                 {/*</div>*/}
-                <Row className="mb-3">
+                {/* <Row className="mb-3">
                   <Colxx xxs={6} sm={6} md={6} className="p-2">
                     <h3>Reservations Completed</h3>
                     <div className="d-flex justify-content-between mb-4">
@@ -103,9 +105,48 @@ const BillingInvoice = ({ match }) => {
                       <p>£ 200</p>
                     </div>
                   </Colxx>
-                </Row>
+                </Row> */}
+
+
+
                 <div>
-                  <h4>Products</h4>
+                  <h4>Your Bookadate Booking</h4>
+                </div>
+                <Table borderless>
+                  <thead>
+                    <tr>
+                      <th className="text-muted text-extra-small mb-2">
+                        ITEM NAME
+                      </th>
+                      <th className="text-muted text-extra-small mb-2">
+                        COUNT
+                      </th>
+                      <th className="text-right text-muted text-extra-small mb-2">
+                        Bookadate %
+                      </th>
+                      <th className="text-right text-muted text-extra-small mb-2">
+                        Bookadate fee
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr >
+                      <td>Regular Bookings</td>
+                      <td>100 pcs</td>
+                      <td className="text-right"> N/A</td>
+                      <td className="text-right"> £200</td>
+                    </tr>
+
+                  </tbody>
+                </Table>
+
+
+                <div className="border-bottom pt-4 mb-5" />
+
+
+                <div>
+                  <h4>Booking with Products</h4>
                 </div>
                 <Table borderless>
                   <thead>
@@ -122,6 +163,9 @@ const BillingInvoice = ({ match }) => {
                       <th className="text-right text-muted text-extra-small mb-2">
                         Bookadate %
                       </th>
+                      <th className="text-right text-muted text-extra-small mb-2">
+                        Bookadate fee
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -130,12 +174,19 @@ const BillingInvoice = ({ match }) => {
                         <td>{product.title}</td>
                         <td>{product.sales} pcs</td>
                         <td className="text-right">£ {product.price}</td>
-                        <td className="text-right"> 1</td>
+                        <td className="text-right"> 10 %</td>
+                        <td className="text-right"> £{product.fee}</td>
                       </tr>
                     ))}
                   </tbody>
                 </Table>
+
+
+
               </div>
+
+
+
               <div className="d-flex flex-column">
                 <div className="border-bottom pt-3 mb-5" />
                 <Table borderless className="d-flex justify-content-end">

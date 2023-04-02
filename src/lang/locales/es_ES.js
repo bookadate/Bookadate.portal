@@ -166,6 +166,7 @@ module.exports = {
   'dashboards.conversion-rates': 'Medidas de Conversión',
   'dashboards.per-session': 'Por Sección',
   'dashboards.profile-status': 'Estado del Perfil',
+  'dashboards.sales-status': 'Estado del Perfil',
   'dashboards.payment-status': 'Estado del Pago',
   'dashboards.work-progress': 'Trabajo en Progreso',
   'dashboards.tasks-completed': 'Tareas Completadas',
